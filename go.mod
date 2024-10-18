@@ -1,4 +1,4 @@
-module k8s.io/system-validators
+module github.com/pacoxu/system-validators
 
 go 1.16
 
