@@ -87,6 +87,7 @@ func getUnifiedMountpoint(path string) (string, bool, error) {
 // Validate is part of the system.Validator interface.
 func (c *CgroupsValidator) Validate(spec SysSpec) (warns, errs []error) {
 	unifiedMountpoint, isCgroupsV2, err := getUnifiedMountpoint(mountsFilePath)
+	fmt.Printf("unifiedMountpoint: %q; isCgroupsV2: %q", unifiedMountpoint, isCgroupsV2)
 	if err != nil {
 		return nil, []error{fmt.Errorf("cannot get a cgroup mount point: %w", err)}
 	}
